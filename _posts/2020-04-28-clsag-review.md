@@ -82,7 +82,10 @@ implementation of [CLSAG](https://github.com/crate-crypto/CLSAG), Ristretto is u
 Using the [haybale-pitchfork](https://github.com/PLSysSec/haybale-pitchfork) crate, an integration test
 is included with this report for testing constant-time violations.
 
-At the time of this report draft, the test fails with one violation originating with `std::ops::BitXor`. A [separate issue/PR](https://github.com/dalek-cryptography/subtle/pull/69) has been opened with [subtle](https://github.com/dalek-cryptography/subtle) crate.
+At the time of this report draft, the test passes with no violation. ~~fails with one violation originating with `std::ops::BitXor`.~~ A [separate issue/PR](https://github.com/dalek-cryptography/subtle/pull/69) has been opened with [subtle](https://github.com/dalek-cryptography/subtle) crate.
+
+__UPDATE (2020-05-06):__ The violations were due to my misconfiguration of `pitchfork`, the integration test has been updated to get valid results. The arguments to `ct_eq(&u8, &u8)` are by-reference, and require instructing `pitchfork`
+the inputs are public pointers to secret data. Completely my mistake, and realized it after a closer reading of the documentation.
 
 
 ### Notes
