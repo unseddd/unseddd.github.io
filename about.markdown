@@ -10,7 +10,7 @@ Join me on my journey contributing, reviewing, and sometimes breaking (responsib
 
 So much love for this field, want to share it with everyone!
 
-If you would like to contact me to perform an audit of your project, please hit me up on [Keybase](https://keybase.io/unseddd).
+If you would like to contact me to perform an audit of your project, please hit me up: [@unseddd:matrix.org](https://riot.im/app).
 
 DISCLAIMER:
 
